@@ -9,7 +9,7 @@ const BlogList = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:8000/blogs')
+        fetch('mongodb+srv://dhami:suran@cluster0.10w2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
             .then((response) => response.json())
             .then((data) => setBlogs(data))
             .catch((error) => console.error('Error fetching blogs:', error));
