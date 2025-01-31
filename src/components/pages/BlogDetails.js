@@ -16,7 +16,7 @@ const BlogDetails = () => {
     if (!comment.trim()) return alert('Comment cannot be empty!');
 
     try {
-      const res = await fetch(`http://localhost:8000/blogs/${blogId}/comments`, {
+      const res = await fetch(`mongodb+srv://dhami:suran@cluster0.10w2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0${blogId}/comments`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,7 +44,7 @@ const BlogDetails = () => {
     const commentId = `${comment.user}${comment.comment}`;
 
     try {
-      const res = await fetch(`http://localhost:8000/blogs/${blogId}/comments/${encodeURIComponent(commentId)}`, {
+      const res = await fetch(`mongodb+srv://dhami:suran@cluster0.10w2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0${blogId}/comments/${encodeURIComponent(commentId)}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -70,7 +70,7 @@ const BlogDetails = () => {
     
   const deleteBlog = async () => {
     try {
-      const res = await fetch(`http://localhost:8000/blogs/${blogId}`, {
+      const res = await fetch(`mongodb+srv://dhami:suran@cluster0.10w2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0${blogId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -88,7 +88,7 @@ const BlogDetails = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/blogs/${blogId}`);
+        const response = await fetch(`mongodb+srv://dhami:suran@cluster0.10w2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0${blogId}`);
         const data = await response.json();
         setBlog(data);
       } catch (error) {
