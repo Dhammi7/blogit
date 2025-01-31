@@ -16,7 +16,7 @@ const Login = () => {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('https://blogit-backend-mxsw.onrender.com', {
+      const response = await fetch('https://blogit-backend-mxsw.onrender.com/account/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
