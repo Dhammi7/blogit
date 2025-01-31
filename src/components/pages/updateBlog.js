@@ -13,7 +13,7 @@ const UpdateBlog = () => {
     const fetchBlogDetails = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`mongodb+srv://dhami:suran@cluster0.10w2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0${blogId}`);
+        const response = await fetch(`https://blogit-backend-mxsw.onrender.com${blogId}`);
         const data = await response.json();
         if (response.ok) {
           setBlog(data);
@@ -46,7 +46,7 @@ const UpdateBlog = () => {
     }
 
     try {
-      const res = await fetch(`mongodb+srv://dhami:suran@cluster0.10w2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0${blogId}`, {
+      const res = await fetch(`https://blogit-backend-mxsw.onrender.com${blogId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
