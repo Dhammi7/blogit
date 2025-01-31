@@ -30,7 +30,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:8000/account/signup', {
+      const response = await fetch('mongodb+srv://dhami:suran@cluster0.10w2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password }),
