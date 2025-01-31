@@ -9,12 +9,11 @@ const BlogList = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://blogit-backend-mxsw.onrender.com'
+        fetch('https://blogit-backend-mxsw.onrender.com/blogs')
             .then((response) => response.json())
             .then((data) => setBlogs(data))
             .catch((error) => console.error('Error fetching blogs:', error));
     }, []);
-
     const indexOfLastBlog = currentPage * blogsPerPage;
     const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
     const currentBlogs = blogs.slice(indexOfFirstBlog, indexOfLastBlog);
