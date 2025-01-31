@@ -8,7 +8,7 @@ const RecentBlogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch('http://localhost:8000/blogs/recent');
+        const response = await fetch('mongodb+srv://dhami:suran@cluster0.10w2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
         const data = await response.json();
         setBlogs(data.slice(0, 3));
       } catch (error) {
