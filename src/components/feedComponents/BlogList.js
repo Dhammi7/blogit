@@ -9,7 +9,7 @@ const BlogList = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('mongodb+srv://dhami:suran@cluster0.10w2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+        fetch('https://blogit-backend-mxsw.onrender.com'
             .then((response) => response.json())
             .then((data) => setBlogs(data))
             .catch((error) => console.error('Error fetching blogs:', error));
