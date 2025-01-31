@@ -8,7 +8,7 @@ const RecentBlogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch('mongodb+srv://dhami:suran@cluster0.10w2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+        const response = await fetch('https://blogit-backend-mxsw.onrender.com');
         const data = await response.json();
         setBlogs(data.slice(0, 3));
       } catch (error) {
