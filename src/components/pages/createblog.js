@@ -37,7 +37,7 @@ const CreateBlog = () => {
         };
 
         try {
-            const response = await fetch('http://localhost:8000/blogs/create', {
+            const response = await fetch('mongodb+srv://dhami:suran@cluster0.10w2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
