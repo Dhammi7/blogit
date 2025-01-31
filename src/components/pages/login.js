@@ -16,7 +16,7 @@ const Login = () => {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('http://localhost:8000/account/login', {
+      const response = await fetch('mongodb+srv://dhami:suran@cluster0.10w2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
