@@ -6,7 +6,7 @@ const Promotion = () => {
 
   const doSubscribe = async () => {
     try {
-      const response = await fetch('mongodb+srv://dhami:suran@cluster0.10w2b.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+      const response = await fetch('https://blogit-backend-mxsw.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
